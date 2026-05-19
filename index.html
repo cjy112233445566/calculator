@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>计算器</title>
+    <title>校园智能助手 - 首页</title>
     <style>
         * {
             margin: 0;
@@ -21,177 +21,153 @@
             padding: 20px;
         }
         
-        .calculator {
+        .container {
             background: white;
-            border-radius: 20px;
-            padding: 30px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-            max-width: 400px;
-            width: 100%;
-        }
-        
-        .display {
-            background: #f8f9fa;
-            border-radius: 10px;
-            padding: 20px;
-            margin-bottom: 20px;
-            text-align: right;
-        }
-        
-        .display input {
-            width: 100%;
-            border: none;
-            background: transparent;
-            font-size: 2.5rem;
-            text-align: right;
-            outline: none;
-            color: #333;
-        }
-        
-        .buttons {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 10px;
-        }
-        
-        .btn {
-            padding: 20px;
-            font-size: 1.2rem;
-            border: none;
-            border-radius: 15px;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            font-weight: 600;
-        }
-        
-        .btn.number {
-            background: #f1f3f4;
-            color: #333;
-        }
-        
-        .btn.number:hover {
-            background: #e0e0e0;
-        }
-        
-        .btn.operator {
-            background: #667eea;
-            color: white;
-        }
-        
-        .btn.operator:hover {
-            background: #5a6fd6;
-        }
-        
-        .btn.clear {
-            background: #ff6b6b;
-            color: white;
-        }
-        
-        .btn.clear:hover {
-            background: #ee5a5a;
-        }
-        
-        .btn.equal {
-            background: #20bf6b;
-            color: white;
-            grid-column: span 2;
-        }
-        
-        .btn.equal:hover {
-            background: #1ba35a;
-        }
-        
-        .btn.function {
-            background: #a29bfe;
-            color: white;
-        }
-        
-        .btn.function:hover {
-            background: #918af5;
-        }
-        
-        .nav-link {
+            border-radius: 25px;
+            padding: 50px;
             text-align: center;
-            margin-bottom: 15px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            max-width: 600px;
+            width: 100%;
         }
         
-        .nav-link a {
-            color: #667eea;
+        .logo {
+            font-size: 4rem;
+            margin-bottom: 20px;
+        }
+        
+        h1 {
+            color: #333;
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            color: #666;
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+        }
+        
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .link-btn {
+            display: inline-block;
+            padding: 18px 30px;
+            font-size: 1.2rem;
+            font-weight: 600;
             text-decoration: none;
-            font-size: 0.9rem;
-            padding: 8px 16px;
-            border: 1px solid #667eea;
-            border-radius: 20px;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            color: white;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .link-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+        }
+        
+        .link-btn.calculator {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+        
+        .link-btn.calculator:hover {
+            box-shadow: 0 10px 30px rgba(245, 87, 108, 0.4);
+        }
+        
+        .link-btn.campus {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+        
+        .link-btn.campus:hover {
+            box-shadow: 0 10px 30px rgba(79, 172, 254, 0.4);
+        }
+        
+        .features {
+            margin-top: 40px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+        
+        .feature-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 15px;
             transition: all 0.3s ease;
         }
         
-        .nav-link a:hover {
-            background: #667eea;
-            color: white;
+        .feature-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        
+        .feature-title {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        
+        .feature-desc {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            color: #999;
+            font-size: 0.9rem;
         }
     </style>
 </head>
 <body>
-    <div class="calculator">
-        <div class="nav-link">
-            <a href="campus/index.html">🏫 校园智能助手</a>
+    <div class="container">
+        <div class="logo">🏫</div>
+        <h1>校园智能助手</h1>
+        <p class="subtitle">你的校园生活好帮手</p>
+        
+        <div class="links">
+            <a href="calculator.html" class="link-btn calculator">🧮 计算器</a>
+            <a href="campus/index.html" class="link-btn campus">🏫 校园服务</a>
         </div>
-        <div class="display">
-            <input type="text" id="result" readonly>
+        
+        <div class="features">
+            <div class="feature-card">
+                <div class="feature-icon">📅</div>
+                <div class="feature-title">课表查询</div>
+                <div class="feature-desc">查看周一至周五课程安排</div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🍽️</div>
+                <div class="feature-title">食堂菜单</div>
+                <div class="feature-desc">早中晚三餐美食推荐</div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🧮</div>
+                <div class="feature-title">计算器</div>
+                <div class="feature-desc">便捷的数学计算工具</div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📱</div>
+                <div class="feature-title">移动适配</div>
+                <div class="feature-desc">支持手机和平板访问</div>
+            </div>
         </div>
-        <div class="buttons">
-            <button class="btn clear" onclick="clearDisplay()">C</button>
-            <button class="btn function" onclick="appendToDisplay('%')">%</button>
-            <button class="btn function" onclick="appendToDisplay('/')">/</button>
-            <button class="btn operator" onclick="appendToDisplay('*')">×</button>
-            
-            <button class="btn number" onclick="appendToDisplay('7')">7</button>
-            <button class="btn number" onclick="appendToDisplay('8')">8</button>
-            <button class="btn number" onclick="appendToDisplay('9')">9</button>
-            <button class="btn operator" onclick="appendToDisplay('-')">−</button>
-            
-            <button class="btn number" onclick="appendToDisplay('4')">4</button>
-            <button class="btn number" onclick="appendToDisplay('5')">5</button>
-            <button class="btn number" onclick="appendToDisplay('6')">6</button>
-            <button class="btn operator" onclick="appendToDisplay('+')">+</button>
-            
-            <button class="btn number" onclick="appendToDisplay('1')">1</button>
-            <button class="btn number" onclick="appendToDisplay('2')">2</button>
-            <button class="btn number" onclick="appendToDisplay('3')">3</button>
-            
-            <button class="btn number" onclick="appendToDisplay('0')">0</button>
-            <button class="btn number" onclick="appendToDisplay('.')">.</button>
-            <button class="btn equal" onclick="calculate()">=</button>
+        
+        <div class="footer">
+            <p>校园智能助手 v1.0</p>
         </div>
     </div>
-
-    <script>
-        const result = document.getElementById('result');
-
-        function appendToDisplay(value) {
-            if (value === '×') {
-                result.value += '*';
-            } else if (value === '−') {
-                result.value += '-';
-            } else {
-                result.value += value;
-            }
-        }
-
-        function clearDisplay() {
-            result.value = '';
-        }
-
-        function calculate() {
-            try {
-                let expression = result.value;
-                expression = expression.replace(/%/g, '/100');
-                const answer = eval(expression);
-                result.value = answer;
-            } catch (error) {
-                result.value = '错误';
-            }
-        }
-    </script>
 </body>
 </html>
